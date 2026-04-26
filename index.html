@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ytpavlov | Links</title>
+    <style>
+        /* Səhifədə yazının seçilməsini bloklayır */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        body {
+            background: linear-gradient(135deg, #020111, #191621);
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { width: 300px; display: flex; flex-direction: column; gap: 15px; }
+        .link-card {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+        .link-card:hover { background: #00d2ff; color: black; }
+    </style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false">
+
+    <h1>Ytpavlov</h1>
+    <div class="container">
+        <a href="https://t.me/istifadeci" class="link-card">Telegram</a>
+        <a href="https://instagram.com/istifadeci" class="link-card">Instagram</a>
+        <a href="https://tiktok.com/@istifadeci" class="link-card">TikTok</a>
+    </div>
+
+    <script>
+        // Sağ düyməni bloklayır
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Klaviatura qısayollarını bloklayır (F12, Ctrl+Shift+I və s.)
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+        }
+    </script>
+</body>
+</html>
