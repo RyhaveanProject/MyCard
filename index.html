@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ytpavlov | Links</title>
+    <title>Ytpavlov | Bağlantılar</title>
     <style>
-        /* Səhifədə yazının seçilməsini bloklayır */
         * {
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -38,7 +37,7 @@
         .link-card:hover { background: #00d2ff; color: black; }
     </style>
 </head>
-<body oncontextmenu="return false" onkeydown="return false">
+<body oncontextmenu="return false">
 
     <h1>Ytpavlov</h1>
     <div class="container">
@@ -48,16 +47,9 @@
     </div>
 
     <script>
-        // Sağ düyməni bloklayır
         document.addEventListener('contextmenu', event => event.preventDefault());
-
-        // Klaviatura qısayollarını bloklayır (F12, Ctrl+Shift+I və s.)
         document.onkeydown = function(e) {
-            if(e.keyCode == 123) return false;
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))) return false;
         }
     </script>
 </body>
